@@ -14,20 +14,16 @@ We wanted to build a solution to make it easier to keep both sources in sync. We
 
 Instructions:
 1.  Install jist as follows:
-<code>
-gem install jist
-</code>
+'''gem install jist
 
 2.  If you are going to use the library in your application, add the following to the Gemfile:
-<code>
+'''
 source :rubygems
 gem 'jist'
-</code>
+'''
 
 3.  Enter your login credentials for your Gist account as follows:
-<code>
-jist --login
-</code>
+'''jist --login
 
 4.  Create the initial Gist on Github.  None of the initial settings matter EXCEPT the filename; make sure that the filename follows this convention: GIST_yourFileNameHere.json
 
@@ -36,29 +32,29 @@ jist --login
 6.  In the code file that contains the relevant Gist, insert GIST_START on the line above the desired text, followed by a space or spaces and yourFileNameHere.  On the line after desired text, insert GIST_END. If code, it is recommended that these be comments.
 
 Ruby code example:
-<code>
+'''ruby
 ...
 #GIST_START yourFileNameHere
 print "This is what I want to appear in the Gist"
 print "Also this too"
 #GIST_END
 ...
-</code>
+'''
 
 Java code example:
-<code>
+'''java
 ...
 // GIST_START yourFileNameHere
 System.out.println("This is what I want to appear in the Gist");
 System.out.println("Also this too");
 //GIST_END
 ...
-</code>
+'''
 
 7.  Run the python script with the files that contain your Gist as arguments, as follows:
-<code>
+'''
 python jistScript.py file1.txt file2.java
-</code>
+'''
 
 Conclusion:
 Existing solutions require developers to cut and paste from their existing code to build GitHub Gists, which results in two sources of truth that must be manually synchronized. Our solution allows the developer to mark segments within his/her code that are to be made into Gists. Whenever the main code is updated, running our tool will generate and upload new Gists to GitHub, ensuring that the Gists they are using for tutorials and etc. are always up to date. Thus, this tool reduces manual labor, improves developer efficiency, and improves the experience of the users of the Gists in that it assures them that the Gists they looking at are up to date. Hope it helps you.
