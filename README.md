@@ -37,22 +37,18 @@ jist --login
 
 Ruby code example:
 <code>
-...
 #GIST_START yourFileNameHere
 This is what I want to appear in the Gist
 Also this too
 #GIST_END
-...
 </code>
 
 Java code example:
 <code>
-...
 // GIST_START yourFileNameHere
 This is what I want to appear in the Gist
 Also this too
 //GIST_END
-...
 </code>
 
 7.  Run the python script with the files that contain your Gist as arguments, as follows:
